@@ -31,10 +31,11 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ListItem item = itemList.get(position);
-        holder.imageView.setImageResource(item.getImageResource());
-        holder.textView1.setText(item.getTitle());
-        holder.textView2.setText(item.getDescription());
-        holder.textView3.setText(item.getDate());
+        holder.jobImg.setImageResource(item.getImageResource());
+        holder.likeImg.setImageResource(item.getLikeImgResource());
+        holder.jobTitle.setText(item.getTitle());
+        holder.jobDes.setText(item.getDescription());
+        holder.createDate.setText(item.getDate());
     }
 
     @Override
@@ -43,15 +44,17 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView imageView;
-        TextView textView1, textView2, textView3;
+        ImageView jobImg, likeImg;
+        TextView jobTitle, jobDes, createDate;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.imageView2);
-            textView1 = itemView.findViewById(R.id.textView);
-            textView2 = itemView.findViewById(R.id.textView2);
-            textView3 = itemView.findViewById(R.id.textView3);
+            jobImg = itemView.findViewById(R.id.jobImg);
+            likeImg = itemView.findViewById(R.id.likeIcon);
+            jobTitle = itemView.findViewById(R.id.jobTitel);
+            jobDes = itemView.findViewById(R.id.jobDes);
+            createDate = itemView.findViewById(R.id.createDate);
+
         }
     }
 }

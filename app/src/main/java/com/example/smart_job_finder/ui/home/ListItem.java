@@ -6,15 +6,22 @@ public class ListItem {
     private String description;
     private String date;
 
-    public ListItem(int imageResource, String title, String description, String date) {
+    private int likeImgResource;
+
+    public ListItem(int imageResource, String title, String description, String date, int likeImgResource) {
         this.imageResource = imageResource;
         this.title = title;
         this.description = description;
         this.date = date;
+        this.likeImgResource = likeImgResource;
     }
 
     public int getImageResource() {
         return imageResource;
+    }
+
+    public int getLikeImgResource() {
+        return likeImgResource;
     }
 
     public String getTitle() {
