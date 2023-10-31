@@ -35,7 +35,6 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
         holder.likeImg.setImageResource(item.getLikeImgResource());
         holder.jobTitle.setText(item.getTitle());
         holder.jobDes.setText(item.getDescription());
-        holder.createDate.setText(item.getDate());
     }
 
     @Override
@@ -45,7 +44,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView jobImg, likeImg;
-        TextView jobTitle, jobDes, createDate;
+        TextView jobTitle, jobDes;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -53,7 +52,6 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
             likeImg = itemView.findViewById(R.id.likeIcon);
             jobTitle = itemView.findViewById(R.id.jobTitel);
             jobDes = itemView.findViewById(R.id.jobDes);
-            createDate = itemView.findViewById(R.id.createDate);
 
         }
     }

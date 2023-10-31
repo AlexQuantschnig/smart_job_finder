@@ -4,15 +4,12 @@ public class ListItem {
     private int imageResource;
     private String title;
     private String description;
-    private String date;
-
     private int likeImgResource;
 
-    public ListItem(int imageResource, String title, String description, String date, int likeImgResource) {
+    public ListItem(int imageResource, String title, String description, int likeImgResource) {
         this.imageResource = imageResource;
         this.title = title;
         this.description = description;
-        this.date = date;
         this.likeImgResource = likeImgResource;
     }
 
@@ -32,7 +29,4 @@ public class ListItem {
         return description;
     }
 
-    public String getDate() {
-        return date;
-    }
 }
