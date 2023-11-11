@@ -34,6 +34,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
         holder.jobImg.setImageResource(item.getImageResource());
         holder.likeImg.setImageResource(item.getLikeImgResource());
         holder.jobTitle.setText(item.getTitle());
+        holder.jobLocation.setText(item.getLocation());
         holder.jobDes.setText(item.getDescription());
     }
 
@@ -44,13 +45,14 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView jobImg, likeImg;
-        TextView jobTitle, jobDes;
+        TextView jobTitle, jobDes, jobLocation;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             jobImg = itemView.findViewById(R.id.jobImg);
             likeImg = itemView.findViewById(R.id.likeIcon);
             jobTitle = itemView.findViewById(R.id.jobTitel);
+            jobLocation = itemView.findViewById(R.id.jobLocation);
             jobDes = itemView.findViewById(R.id.jobDes);
 
         }

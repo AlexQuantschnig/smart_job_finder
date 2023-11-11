@@ -3,13 +3,16 @@ package com.example.smart_job_finder.ui.home;
 public class ListItem {
     private int imageResource;
     private String title;
+
+    private String location;
     private String description;
     private int likeImgResource;
 
-    public ListItem(int imageResource, String title, String description, int likeImgResource) {
+    public ListItem(int imageResource, String title, String description, String location, int likeImgResource) {
         this.imageResource = imageResource;
         this.title = title;
         this.description = description;
+        this.location = location;
         this.likeImgResource = likeImgResource;
     }
 
@@ -19,6 +22,10 @@ public class ListItem {
 
     public int getLikeImgResource() {
         return likeImgResource;
+    }
+
+    public String getLocation() {
+        return location;
     }
 
     public String getTitle() {
