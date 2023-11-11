@@ -33,13 +33,14 @@
 
     <TextView
         android:id="@+id/jobDes"
-        android:layout_width="250dp"
+        android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:ellipsize="end"
         android:maxLines="1"
         android:scrollHorizontally="true"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/jobImg"
         tools:text="@tools:sample/lorem[4:10]" />
@@ -53,9 +54,11 @@
 
     <ImageButton
         android:id="@+id/likeIcon"
-        android:layout_width="55dp"
-        android:layout_height="43dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:layout_marginEnd="4dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/jobTitel"
@@ -71,7 +74,7 @@
         android:text="Location"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/likeIcon"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/jobTitel" />
 

@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">smart_job_finder</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Smart Job Finder</string>
+    <string name="title_dashboard">Likes</string>
 </resources>

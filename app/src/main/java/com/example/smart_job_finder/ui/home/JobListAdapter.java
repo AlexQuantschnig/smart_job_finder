@@ -3,6 +3,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -44,7 +45,9 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView jobImg, likeImg;
+        ImageView jobImg;
+
+        ImageButton likeImg;
         TextView jobTitle, jobDes, jobLocation;
 
         public ViewHolder(@NonNull View itemView) {
