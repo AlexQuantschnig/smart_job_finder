@@ -11,6 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.smart_job_finder.databinding.FragmentDashboardBinding;
+import com.example.smart_job_finder.ui.home.ListItem;
+
+import java.util.List;
 
 public class DashboardFragment extends Fragment {
 

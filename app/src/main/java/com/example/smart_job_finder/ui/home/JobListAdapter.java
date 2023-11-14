@@ -1,5 +1,6 @@
 package com.example.smart_job_finder.ui.home;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.smart_job_finder.R;
+import com.example.smart_job_finder.ui.dashboard.DashboardFragment;
+
 import java.util.List;
 
 
@@ -42,11 +45,16 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
         holder.jobDes.setText(item.getDescription());
 
         holder.likeImg.setOnClickListener(v -> {
+            Log.println(Log.INFO, "Like", "Like");
             if (item.getLikeImgResource() == R.drawable.ic_heart) {
+                item.setLikeImgResource(R.drawable.ic_heart_filled_foreground);
                 holder.likeImg.setImageResource(R.drawable.ic_heart_filled_foreground);
-            } else {
+            }else{
+                item.setLikeImgResource(R.drawable.ic_heart);
                 holder.likeImg.setImageResource(R.drawable.ic_heart);
             }
+
+
         });
     }
 

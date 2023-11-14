@@ -36,4 +36,7 @@ public class ListItem {
         return description;
     }
 
+    public void setLikeImgResource(int likeImgResource) {
+        this.likeImgResource = likeImgResource;
+    }
 }
