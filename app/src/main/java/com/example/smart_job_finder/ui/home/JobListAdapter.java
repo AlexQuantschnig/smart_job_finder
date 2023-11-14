@@ -25,7 +25,10 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recycler_view_item, parent, false); // Replace with your item layout name
+                .inflate(R.layout.recycler_view_item, parent, false);
+
+
+
         return new ViewHolder(view);
     }
 
@@ -37,6 +40,14 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
         holder.jobTitle.setText(item.getTitle());
         holder.jobLocation.setText(item.getLocation());
         holder.jobDes.setText(item.getDescription());
+
+        holder.likeImg.setOnClickListener(v -> {
+            if (item.getLikeImgResource() == R.drawable.ic_heart) {
+                holder.likeImg.setImageResource(R.drawable.ic_heart_filled_foreground);
+            } else {
+                holder.likeImg.setImageResource(R.drawable.ic_heart);
+            }
+        });
     }
 
     @Override
@@ -57,6 +68,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
             jobTitle = itemView.findViewById(R.id.jobTitel);
             jobLocation = itemView.findViewById(R.id.jobLocation);
             jobDes = itemView.findViewById(R.id.jobDes);
+
 
         }
     }

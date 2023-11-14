@@ -1,6 +1,7 @@
 package com.example.smart_job_finder;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
