@@ -1,4 +1,4 @@
-package com.example.smart_job_finder.ui.dashboard;
+package com.example.smart_job_finder.ui.like;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
