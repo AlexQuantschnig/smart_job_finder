@@ -7,31 +7,26 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.smart_job_finder.JobList;
 import com.example.smart_job_finder.R;
-import com.example.smart_job_finder.databinding.FragmentDashboardBinding;
-import com.example.smart_job_finder.ui.home.ListItem;
+import com.example.smart_job_finder.databinding.FragmentLikesBinding;
+import com.example.smart_job_finder.Job;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class LikeFragment extends Fragment {
-
-    private FragmentDashboardBinding binding;
-    private RecyclerView recyclerView;
-    private LikeListAdapter adapter;
-    private static List<ListItem> likeList = new ArrayList<>();
-
-
+public class LikeFragment extends Fragment{
+    private FragmentLikesBinding binding;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentLikesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        List<Job> jobs = JobList.getJobList().stream().filter(Job::isLiked).collect(Collectors.toList());
 
-        recyclerView = root.findViewById(R.id.likeList);
-
+        RecyclerView recyclerView = root.findViewById(R.id.likeList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new LikeListAdapter(getActivity(), likeList);
+        LikeListAdapter adapter = new LikeListAdapter(getActivity(), jobs);
         recyclerView.setAdapter(adapter);
 
         return root;
@@ -43,8 +38,4 @@ public class LikeFragment extends Fragment {
         binding = null;
     }
 
-    public void addToLikedItemList(ListItem item) {
-        likeList.add(item);
-        adapter.notifyDataSetChanged();
-    }
 }
