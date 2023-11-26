@@ -1,6 +1,7 @@
 package com.example.smart_job_finder.ui.home;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,11 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
         holder.likeImg.setImageResource(job.getLikeImgResource());
         holder.jobTitle.setText(job.getTitle());
         holder.jobLocation.setText(job.getLocation());
+
+
+        holder.itemView.setOnClickListener(v -> {
+            Log.i("JobList", "onClick: Clicked Item"+ job.getTitle());
+        });
 
         holder.likeImg.setOnClickListener(v -> {
             if (job.getLikeImgResource() == R.drawable.ic_heart) {
