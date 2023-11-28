@@ -54,6 +54,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, SentActivity.class);
+            intent.putExtra("job", job);
             startActivity(context, intent, null);
         });
 
