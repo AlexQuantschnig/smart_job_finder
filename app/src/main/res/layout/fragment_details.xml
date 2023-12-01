@@ -11,25 +11,126 @@
         android:id="@+id/detailsImg"
         android:layout_width="94dp"
         android:layout_height="115dp"
+        android:layout_marginStart="24dp"
         android:padding="16dp"
         android:src="@drawable/x_logo"
-        app:layout_constraintStart_toEndsOf="@id/headlineTextView"
+        app:layout_constraintStart_toEndsOf="@id/positionHeadlineTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/headlineTextView"
+        android:id="@+id/positionHeadlineTextView"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:padding="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:padding="12dp"
         android:text="Position"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailsImg"
         app:layout_containsBottom_toBottomOf="parent" />
 
+    <TextView
+        android:id="@+id/positionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:padding="12dp"
+        android:text="Position Text Position Text Position Text Position Text Position Text Position Text"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/positionHeadlineTextView" />
+
+    <TextView
+        android:id="@+id/locationHeadlineTextView"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:padding="12dp"
+        android:text="Location"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/positionTextView"
+        app:layout_containsBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:padding="12dp"
+        android:text="Location"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationHeadlineTextView" />
+
+    <TextView
+        android:id="@+id/descriptionHeadlineTextView"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:padding="12dp"
+        android:text="Description"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextView"
+        app:layout_containsBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:padding="12dp"
+        android:text="Description DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionHeadlineTextView" />
+
+    <TextView
+        android:id="@+id/contactHeadlineTextView"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:padding="12dp"
+        android:text="Contact"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+        app:layout_containsBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/contactTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:padding="12dp"
+        android:text="office@smartjobfinder.at"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactHeadlineTextView" />
+
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="APPLY"
+        app:layout_constraintTop_toBottomOf="@+id/contactTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
