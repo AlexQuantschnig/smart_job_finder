@@ -2,21 +2,26 @@ package com.example.smart_job_finder;
 
 import androidx.annotation.NonNull;
 
-public class Job {
+import java.io.Serializable;
+
+public class Job implements Serializable {
 
     private final int imageResource;
     private final String title;
     private final String location;
+
+    private final String email;
     private final String description;
     private int likeImgResource;
     private boolean isLiked;
 
-    public Job(int imageResource, String title, String description, String location, int likeImgResource) {
+    public Job(int imageResource, String title, String description, String location, int likeImgResource, String email) {
         this.imageResource = imageResource;
         this.title = title;
         this.description = description;
         this.location = location;
         this.likeImgResource = likeImgResource;
+        this.email = email;
         this.isLiked = false;
     }
 
@@ -46,6 +51,10 @@ public class Job {
 
     public void setLiked(boolean liked) {
         isLiked = liked;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
 
