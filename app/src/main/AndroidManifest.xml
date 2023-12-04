@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Smart_job_finder"
         tools:targetApi="31">
         <activity
-            android:name=".ui.details.SentActivity"
+            android:name=".ui.send.SendActivity"
             android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity

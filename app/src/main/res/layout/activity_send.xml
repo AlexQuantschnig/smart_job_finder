@@ -4,41 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.details.SentActivity">
+    tools:context=".ui.send.SendActivity">
 
-    <EditText
-        android:id="@+id/application_input"
-        android:layout_width="362dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:drawable/editbox_background_normal"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/put_your_application_here"
-        android:inputType="textMultiLine"
+    <Button
+        android:id="@+id/sent_button"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/sent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/application_label" />
-
-    <EditText
-        android:id="@+id/user_email_input"
-        android:layout_width="364dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:background="@android:drawable/editbox_background_normal"
-        android:ems="10"
-        android:hint="@string/your_email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/from_label" />
+        app:layout_constraintTop_toBottomOf="@+id/application_input" />
 
     <TextView
         android:id="@+id/application_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/your_application"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -51,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="100dp"
         android:text="@string/to"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -60,22 +46,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/email_input"
-        android:layout_width="364dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/email"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/to_lable" />
-
-    <TextView
         android:id="@+id/from_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/from"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -83,25 +58,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_input" />
 
-    <Button
-        android:id="@+id/sent_button"
-        android:layout_width="250dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/sent"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <EditText
+        android:id="@+id/application_input"
+        android:layout_width="362dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/put_your_application_here"
+        android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/application_input" />
+        app:layout_constraintTop_toBottomOf="@+id/application_label" />
+
+    <TextView
+        android:id="@+id/email_input"
+        android:layout_width="364dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/email"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_lable" />
+
+    <EditText
+        android:id="@+id/user_email_input"
+        android:layout_width="364dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:hint="@string/your_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_label" />
 
     <TextView
         android:id="@+id/jobTitleSent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="172dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="181dp"
         android:text="Titel"
         android:textColor="#000000"
