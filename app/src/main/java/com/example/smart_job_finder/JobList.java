@@ -1,7 +1,5 @@
 package com.example.smart_job_finder;
-
 import android.app.Application;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

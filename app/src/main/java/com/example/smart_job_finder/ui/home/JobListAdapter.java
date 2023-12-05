@@ -24,8 +24,8 @@ import java.util.List;
 
 
 public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHolder> {
-    private List<Job> jobs;
-    private Context context;
+    private final List<Job> jobs;
+    private final Context context;
 
     public JobListAdapter(Context context, List<Job> jobs) {
         this.context = context;
@@ -82,7 +82,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
         return jobs.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView jobImg;
 
         ImageButton likeImg;

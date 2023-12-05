@@ -22,7 +22,7 @@ import java.util.List;
 public class LikeListAdapter extends RecyclerView.Adapter<LikeListAdapter.ViewHolderLikes>{
     private final List<Job> jobs;
 
-    private Context context;
+    private final Context context;
 
 
     public LikeListAdapter(Context context, List<Job> likeList ) {
