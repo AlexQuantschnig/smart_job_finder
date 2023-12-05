@@ -17,4 +17,10 @@
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_likes" />
 
+    <activity
+        android:id="@+id/navigation_send"
+        android:name="com.example.smart_job_finder.ui.send.SendActivity"
+        android:label="Send Application"
+        tools:layout="@layout/activity_send" />
+
 </navigation>

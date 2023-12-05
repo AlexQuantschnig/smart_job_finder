@@ -9,12 +9,11 @@ import com.example.smart_job_finder.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.example.smart_job_finder.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(

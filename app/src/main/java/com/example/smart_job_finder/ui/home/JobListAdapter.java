@@ -1,7 +1,9 @@
 package com.example.smart_job_finder.ui.home;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
-import android.util.Log;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +17,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.smart_job_finder.Job;
 import com.example.smart_job_finder.JobList;
 import com.example.smart_job_finder.R;
+import com.example.smart_job_finder.ui.send.SendActivity;
 
 
 import java.util.List;
 
 
 public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHolder> {
-    private List<Job> jobs;
-    private Context context;
+    private final List<Job> jobs;
+    private final Context context;
 
     public JobListAdapter(Context context, List<Job> jobs) {
         this.context = context;
@@ -47,9 +50,13 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
         holder.jobTitle.setText(job.getTitle());
         holder.jobLocation.setText(job.getLocation());
 
-
+        //Should be the detail page of the job but for now it's the send page
+        //Don't forget to change the parent activity of the send page in the manifest
+        //TODO: Change the intent to the detail page of the job
         holder.itemView.setOnClickListener(v -> {
-            Log.i("JobList", "onClick: Clicked Item"+ job.getTitle());
+            Intent intent = new Intent(context, SendActivity.class);
+            intent.putExtra("job", job);
+            startActivity(context, intent, null);
         });
 
         holder.likeImg.setOnClickListener(v -> {
@@ -75,7 +82,7 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.ViewHold
         return jobs.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView jobImg;
 
         ImageButton likeImg;
