@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.smart_job_finder.JobList;
 import com.example.smart_job_finder.R;
 import com.example.smart_job_finder.Job;
+import com.example.smart_job_finder.ui.detail.DetailsActivity;
 import com.example.smart_job_finder.ui.send.SendActivity;
 
 import java.util.List;
@@ -47,11 +48,8 @@ public class LikeListAdapter extends RecyclerView.Adapter<LikeListAdapter.ViewHo
         holder.jobTitle.setText(job.getTitle());
         holder.jobLocation.setText(job.getLocation());
 
-        //Should be the detail page of the job but for now it's the send page
-        //Don't forget to change the parent activity of the send page in the manifest
-        //TODO: Change the intent to the detail page of the job
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context , SendActivity.class);
+            Intent intent = new Intent(context , DetailsActivity.class);
             intent.putExtra("job", job);
             startActivity(context, intent, null);
         });

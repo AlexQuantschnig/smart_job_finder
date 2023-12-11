@@ -66,4 +66,8 @@ public class Job implements Serializable {
                 ", isLiked=" + isLiked +
                 '}';
     }
+
+    public String getDescription() {
+        return description;
+    }
 }
