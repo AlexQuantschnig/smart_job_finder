@@ -23,6 +23,8 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
         Job job = (Job) getIntent().getSerializableExtra("job");
+        assert job != null;
+        Objects.requireNonNull(getSupportActionBar()).setTitle(job.getTitle());
 
 
         ImageView detailsImage = findViewById(R.id.detailsImg);
