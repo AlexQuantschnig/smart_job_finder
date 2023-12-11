@@ -60,7 +60,7 @@
 
     <EditText
         android:id="@+id/application_input"
-        android:layout_width="362dp"
+        android:layout_width="0dp"
         android:layout_height="250dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
@@ -91,7 +91,7 @@
 
     <EditText
         android:id="@+id/user_email_input"
-        android:layout_width="364dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
