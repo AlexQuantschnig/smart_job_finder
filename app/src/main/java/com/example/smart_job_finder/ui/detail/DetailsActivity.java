@@ -26,16 +26,11 @@ public class DetailsActivity extends AppCompatActivity {
 
 
         ImageView detailsImage = findViewById(R.id.detailsImg);
-        TextView positionHeadline = findViewById(R.id.positionHeadlineTextView);
         TextView positionText = findViewById(R.id.positionTextView);
-        TextView locationHeadlineText = findViewById(R.id.locationTextView);
         TextView locationText = findViewById(R.id.locationTextView);
-        TextView descriptionHeadline = findViewById(R.id.descriptionHeadlineTextView);
         TextView descriptionText = findViewById(R.id.descriptionTextView);
-        TextView contactHeadlineText = findViewById(R.id.contactHeadlineTextView);
         TextView contactText = findViewById(R.id.contactTextView);
         Button applyButton = findViewById(R.id.applyButton);
-
         detailsImage.setImageResource(job.getImageResource());
         positionText.setText(job.getTitle());
         locationText.setText(job.getLocation());
